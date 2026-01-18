@@ -1,0 +1,8 @@
+streamlit
+pymupdf
+requests
+python-pptx
+groq
+arabic-reshaper
+python-bidi
+fpdf2
