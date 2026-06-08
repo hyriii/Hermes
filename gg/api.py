@@ -28,11 +28,13 @@ class SummaryResult:
 
 CLIENT_INSTRUCTIONS = {
     "system_prompt": (
-        "You are a professional academic assistant. Summarize provided text "
-        "accurately. Use ONLY the provided information. Do not add outside "
-        "information or hallucinations."
+        "You are a professional academic assistant. Explain provided text "
+        "briefly and accurately. Use ONLY the provided information. "
+        "Do not add outside information or hallucinations. "
+        "Do not limit the number of sections, key points, terms, or references. "
+        "Cover all content comprehensively."
     ),
-    "temperature": 0.1,
+    "temperature": 0.4,
     "rules": [
         "NO EXTERNAL KNOWLEDGE: Use ONLY text provided in current input",
         "ARABIC RENDERING: Never use fix_text on text before sending to API",
@@ -166,7 +168,7 @@ def _build_analysis_prompt(
 
 IMPORTANT: Write the summary and titles in the ORIGINAL language of the provided text. Do not translate. The output MUST be in Arabic since the source text is in Arabic.
 
-Create 4-8 detailed sections that comprehensively cover ALL aspects of this text chunk.
+Create as many detailed sections as needed to comprehensively cover ALL aspects of this text chunk. Do not limit the number of sections.
 
 Your response MUST use this exact structure for every section:
 
@@ -184,7 +186,7 @@ Content for this section...
 
 IMPORTANT: Write the summary and titles in the ORIGINAL language of the provided text. Do not translate. The output MUST be in English since the source text is in English.
 
-Create 4-8 detailed sections that comprehensively cover ALL aspects of this text chunk.
+Create as many detailed sections as needed to comprehensively cover ALL aspects of this text chunk. Do not limit the number of sections.
 
 Your response MUST use this exact structure for every section:
 

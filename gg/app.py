@@ -1,6 +1,5 @@
 """
 Hermes / أبو محسوب لعدم الرسوب
-The Wisdom of Hermes, the Success of Abu Mahsoub
 
 Entry point – delegates to the interface module.
 """
